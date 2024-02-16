@@ -18,9 +18,9 @@ public class PropostaResponseDto {
     private String cpf;
     private Double renda;
     private Double valorSolicitado;
-    private int prazoPagameto;
+    private int prazoPagamento;
 
-    private Boolean aprovado;
+    private Boolean aprovada;
     private String observacao;
 
 }

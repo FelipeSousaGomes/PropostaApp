@@ -1,7 +1,14 @@
 package com.gomes.propostaapp.entity;
 
 import jakarta.persistence.*;
-
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
 @Entity
 public class Proposta {
 
@@ -15,7 +22,7 @@ public class Proposta {
     private Boolean aprovada;
    private boolean integrada;
    private String observacao;
-   @OneToOne
+   @OneToOne(cascade = CascadeType.PERSIST)
    @JoinColumn(name = "id_usuario")
    private Usuario usuario;
 
